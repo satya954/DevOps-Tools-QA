@@ -1,2 +1,25 @@
-# prep-int-questions
-Important points to remember - Topic Wise
+# Important Points to Remember in DevOps 
+
+**Kubernetes**:
+
+**AWS**:
+
+**Linux**:
+
+**Ansible**:
+
+**Python**:
+
+**Jenkins**:
+
+**Terraform**:
+
+**Chef**:
+
+**Rundeck**:
+
+**Prometheus**:
+
+**Grafana**:
+
+**Kibana**:
