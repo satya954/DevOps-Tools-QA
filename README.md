@@ -1,12 +1,9 @@
 		**Ceritified on **
 
-[CKA.pdf](https://github.com/user-attachments/files/18217821/CKA.pdf)
+Here is the certificate for [Certified Kubernetes Administrator](https://github.com/user-attachments/files/18217821/CKA.pdf)
 
-
-
-
-
-[AWS Certified Cloud Practitioner certificate.pdf](https://github.com/user-attachments/files/18217820/AWS.Certified.Cloud.Practitioner.certificate.pdf)
+Here is the Certificate for 
+[AWS Certified Cloud Practitioner] (https://github.com/user-attachments/files/18217820/AWS.Certified.Cloud.Practitioner.certificate.pdf)
 
 
 
