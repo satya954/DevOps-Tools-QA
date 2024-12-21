@@ -8,20 +8,21 @@ Here is the Certificate for [AWS Certified Cloud Practitioner](https://github.co
 	For more details you can visit the below Topics.
 
 
-**Kubernetes**:
-			https://github.com/satya954/prep-int-questions/blob/main/Kubernetes.md
+**Kubernetes**:		https://github.com/satya954/prep-int-questions/blob/main/Kubernetes.md
+
+**Docker**:		https://github.com/satya954/prep-int-questions/blob/main/Docker.md
 
 **AWS**:
 
 **Linux**:
 
-**Ansible**:
+**Ansible**:		https://github.com/satya954/prep-int-questions/blob/main/Ansible.md
 
 **Python**:
 
-**Jenkins**:
+**Jenkins**:		https://github.com/satya954/prep-int-questions/blob/main/Jenkins.md
 
-**Terraform**:
+**Terraform**:		https://github.com/satya954/prep-int-questions/blob/main/Terraform.md
 
 **Chef**:
 
