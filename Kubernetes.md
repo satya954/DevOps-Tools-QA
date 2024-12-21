@@ -1,6 +1,7 @@
 ** Kubernetes Interview Questions **:
-		-------------------- Beginner Level: -------------------------
 
+				---------- Beginner Level: -----------
+ 
 1. What is Kubernetes. ?
 Ans:
 
@@ -19,7 +20,7 @@ Ans:
 12. How can you expose a kubernetes deployment to the outside world ?
 
 
- 				--- Intermediate Level: -----------
+ 				---------- Intermediate Level: -----------
 1. What is a stateful set in Kubernetes ?
 2. Explain the diff b/w a Deployment and Stateful Set ?
 3. How does kubernetes handle storage for applications ?
@@ -31,11 +32,8 @@ Ans:
 
 
 
-
-
-
-	---------------------------- Faced in Real time: --------------------------------
-
+				---------- Real time : -----------
+	
 1. How many microservices have you worked on ?
 
 2. How many kubernetes cluster do u handle ?
