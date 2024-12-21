@@ -1,11 +1,11 @@
-** Kubernetes Interview Questions **:
+				**Kubernetes Interview Questions:**
 
 				---------- Beginner Level: -----------
  
 1. What is Kubernetes. ?
 Ans:
 
-2. What are the main points of Kubernetes ?
+2. What are the main components of Kubernetes ?
 Ans:
 
 3. What is a Pod in Kubernetes ?
@@ -46,4 +46,30 @@ Ans:
 
 6. Why do we use stateful-Sets over Deployments for database applications ?
 
-7. 
+7. How to troubleshoot when the pod is not able to start ?
+
+8. Disk pressurce for node, How to resolv it ?
+
+9. How to the Upgrade the cluster ?
+
+10. What happens (step-by-step) when you are upgrading the kubernetes cluster ?
+
+11. How do you monitor the kubernetes Pods and Deployments ?
+
+12. which Alerts mechanisms you have worked on ?
+
+13. How do you get alerts ?
+
+14. Let's say, if you are using Prometheus how do you recieve the alert to you ?
+
+15. How to deploy microservice in AWS ?
+
+16. How to stream the Kubernetes logs ?
+
+17. How to monitor the Kubernetes services ?
+
+18. On What parameters, how do u define kubernetes Hardware configuration ?
+
+19. How to use Ingress Controller ?
+
+20. 
