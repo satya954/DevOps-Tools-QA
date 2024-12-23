@@ -3,7 +3,6 @@
 	An open-source tool for automation, known for its simplicity and agentless architecture.
       
       					Why Ansible?
-
 With its agentless approach, YAML-based playbooks, and Python dependencies, Ansible is a game-changer for:
    . Server Provisiong
    . Configuration management
