@@ -1,12 +1,13 @@
 1. Why Ansible?
- . With its agentless approach, YAML-based playbooks, and Python dependencies, Ansible is a game-changer for:
+
+Ans:  With its agentless approach, YAML-based playbooks, and Python dependencies, Ansible is a game-changer for:
    . Server Provisiong
    . Configuration management
    . Application Deployment
    . Continous Delivery and Orcherstration.
    
 1️⃣ What is Ansible?
-An open-source tool for automation, known for its simplicity and agentless architecture.
+. An open-source tool for automation, known for its simplicity and agentless architecture.
 
 2️⃣ Setting Up Master & Worker Nodes:
 Step-by-step instructions to configure Ansible on multiple servers, including SSH key setup and hosts file configuration.
