@@ -1,5 +1,4 @@
 1. Why Ansible?
-
 Ans:  With its agentless approach, YAML-based playbooks, and Python dependencies, Ansible is a game-changer for:
    . Server Provisiong
    . Configuration management
@@ -7,31 +6,16 @@ Ans:  With its agentless approach, YAML-based playbooks, and Python dependencies
    . Continous Delivery and Orcherstration.
    
 1️⃣ What is Ansible?
-. An open-source tool for automation, known for its simplicity and agentless architecture.
-
-2️⃣ Setting Up Master & Worker Nodes:
-Step-by-step instructions to configure Ansible on multiple servers, including SSH key setup and hosts file configuration.
-
-3️⃣ Modules and Commands:
-Examples of ad hoc commands to check server status, install packages like NGINX, and troubleshoot issues.
-
-4️⃣ Common Errors and Troubleshooting:
-How to resolve permission issues and other common challenges in Ansible setups.
-
-5️⃣ Installing and Managing NGINX and Docker:
-Automating the installation and management of NGINX and Docker on Ubuntu and redhat Linux 2 servers.
-
-6️⃣ Introduction to Inventory and Playbooks:
-A glimpse into inventory file configurations and a teaser for the next post about creating and using playbooks in Ansible.
+Ans: An open-source tool for automation, known for its simplicity and agentless architecture.
 
 
-              			**Interview Questions**:
+              			      **Interview Questions**:
 
 1. How would you ensure that a specific package is installed on multiple servers?
-Answer: You can use the package module in a playbook to ensure that a specific package is installed across multiple servers. 
+Ans: You can use the **package** module in a playbook to ensure that a specific package is installed across multiple servers. 
 
 2. How do you handle different environments (development, testing, production) with Ansible?
-Answer: You can manage different environments by using inventory files and group variables. Create separate inventory files for each environment and use group variables to specify environment-specific configurations. Each hosts file would define the servers for that specific environment, and you can create a group_vars directory for each environment.
+Ans: You can manage different environments by using inventory files and group variables. Create separate inventory files for each environment and use group variables to specify environment-specific configurations. Each hosts file would define the servers for that specific environment, and you can create a group_vars directory for each environment.
 
 3. How would you restart a service after updating a configuration file?
 Answer: You can use the notify feature in Ansible to restart a service after a configuration file is updated.
