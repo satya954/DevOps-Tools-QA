@@ -1,11 +1,10 @@
-▶️ Why Ansible?
-With its agentless approach, YAML-based playbooks, and Python dependencies, Ansible is a game-changer for:
-
-✅ Server provisioning
-✅ Configuration management
-✅ Application deployment
-✅ Continuous delivery and orchestration
-
+1. Why Ansible?
+ . With its agentless approach, YAML-based playbooks, and Python dependencies, Ansible is a game-changer for:
+   . Server Provisiong
+   . Configuration management
+   . Application Deployment
+   . Continous Delivery and Orcherstration.
+   
 1️⃣ What is Ansible?
 An open-source tool for automation, known for its simplicity and agentless architecture.
 
@@ -25,7 +24,7 @@ Automating the installation and management of NGINX and Docker on Ubuntu and red
 A glimpse into inventory file configurations and a teaser for the next post about creating and using playbooks in Ansible.
 
 
-              **Interview Questions**:
+              			**Interview Questions**:
 
 1. How would you ensure that a specific package is installed on multiple servers?
 Answer: You can use the package module in a playbook to ensure that a specific package is installed across multiple servers. 
