@@ -1,3 +1,20 @@
+####### After creating an new repo
+echo "# test-git-repo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/satya954/devops.git
+git push -u origin main
+
+
+####### For Existing branch commands
+git remote add origin https://github.com/satya954/devops.git
+git branch -M main
+git push -u origin main
+
+
+
 	git init		=>	Initialized local repo.	// It will create .git directory inside that directory.
 
 				// Create a file named abcd.sh
