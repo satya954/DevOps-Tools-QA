@@ -1,8 +1,7 @@
 # Tell me about Yourself
-Hi Ramesh, I am S.Satyanarayana. I am having 7+ years of experience as a DevOps Engineer. For the past 7 years, i have been working as a DevOps engineer in 
-MedPlus health services ltd. In that position, I have worked with various techonologies like SVN, Git, Jenkins for Building the projects, Configuration management 
-tools like Chef, Ansible, Rundeck, Nexus for artifactory repo, Docker for containersation, Kubernetes for orchestration, Webservers like Apache, Nginx, 
-Php, MySQL, Apache Tomcat, NodeJs, Monitoring tools like Nexus, Prometheus, Grafana, Cloud Services like AWS.
+Hi Ramesh, I am S.Satyanarayana. 
+- I am having 7+ years of experience as a DevOps Engineer. For the past 7 years, i have been working as a DevOps engineer in MedPlus health services.
+- In that position, I have worked with various techonologies like SVN, Git, Jenkins for Building the projects, Configuration management tools like Chef, Ansible, Rundeck, Nexus for artifactory repo, Docker for containersation, Kubernetes for orchestration, Webservers like Apache, Nginx, PHP, MySQL, Apache Tomcat, NodeJs, Monitoring tools like Nexus, Prometheus, Grafana, Cloud Services like AWS.
 
 # Coming to my Roles & Responsibilities
 - Creating & maintaining repositories in our Source Code management tool Subversion.
@@ -18,3 +17,5 @@ Php, MySQL, Apache Tomcat, NodeJs, Monitoring tools like Nexus, Prometheus, Graf
 - Certified as a AWS Cloud Practitioner.
 - Good in Writing ansible playbooks and Shell scrips.
 - Taking the database backups as per the schedule and restoring them on required basis.
+- Having Good experience on Nagios.
+- Having good knowledge on AWS services like EC2, S3, EKS, VPC. 
