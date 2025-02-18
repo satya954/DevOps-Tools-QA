@@ -19,3 +19,18 @@ Hi Ramesh, I am S.Satyanarayana.
 - Taking the database backups as per the schedule and restoring them on required basis.
 - Having Good experience on Nagios.
 - Having good knowledge on AWS services like EC2, S3, EKS, VPC. 
+
+# Important Points - Recognition
+- Introduced Ansible technology.
+- Created playbooks & Roles for installing & configuration of services like Apache, Nginx, Kafka, Mongo, Zookeepers, Apache Solr, Redis tools.
+- Played an important role in configuring the microservices network policies, storing the logs, Monitoring the applications using Prometheus, Grafana.
+- Usage of Helm concepts in deploying the kubernetes applications.
+- Introduced Kubernetes Health probes to maintain the application Highly available all the time.
+
+
+
+
+
+
+
+  
