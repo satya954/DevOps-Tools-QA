@@ -31,19 +31,19 @@ Hi Ramesh, I am S.Satyanarayana.
 - I will check my JIRA Dashboard, which are assigned to me.
 - Will complete the tickets, based on the Priority.
 - Monitoring the Nagios & Grafana Dashboards for Production environments.
-- Will create a Project / creation of new branch / tag from Source Code Management.
+- Create a Project / Creation of new branch / tag in our Source Code Management.
 - Installing / Configuring any new service.
-- Will co-ordinate with the Dev team's and change the respective changes in Automation Project as well as Chef /  Ansible servers.
+- Co-ordinate with the Dev team's and update their respective changes in Automation Project as well as Chef /  Ansible servers.
 - Deploy the applications as per the mail.
-- Will verify & Resolved the issues occured in any Jenkins Pipeline / While deployment.
-- Will resolve the Developer's & Testing team member system issues.
+- Will verify & Resolve the issues occured in any Jenkins Pipeline or caused while deployment.
+- Will resolve the Developer's & Testing team member's system issues.
 - Preparation of RCA Reports for the incidents occured.
 - Creating / Updating the backup scripts and maintenance of those backups into Central Location.
 - Creation / Updation / deletion of user's and their rights in our Active Directory and our Gateway servers.
 - Creation / Updation of our Firewall rules for White listing of URL's and Ports.
-- Checking the free space for any alerts occured.
+- Checking the free space / Resources issues for any alerts occured.
 - Resolving the blockage in the application properties for the issues caused due to any connectivity issues b/w the applications.
-
+- Always make the application to be highly available.
 
 .
 
