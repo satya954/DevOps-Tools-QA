@@ -26,6 +26,7 @@ Hi Ramesh, I am S.Satyanarayana.
 - Played an important role in configuring the microservices network policies, storing the logs, Monitoring the applications using Prometheus, Grafana.
 - Usage of Helm concepts in deploying the kubernetes applications.
 - Introduced Kubernetes Health probes to maintain the application Highly available all the time.
+- Actively contributed to the strategic planning and successful execution of the Data Center Migration process, ensuring minimal downtime, optimized resource allocation, and seamless transition across all systems and applications.
 
 # Daily Activities
 - I will check my JIRA Dashboard, which are assigned to me.
