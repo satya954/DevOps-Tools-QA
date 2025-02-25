@@ -15,3 +15,12 @@
 7. How to Achieve the skipping the QA Person ?
 
 8. 
+
+</details>
+<summary>In general, what do you need in order to communicate?</summary><br><b>
+
+  - A common language (for the two ends to understand)
+  - A way to address who you want to communicate with
+  - A Connection (so the content of the communication can reach the recipients)
+
+</b></details>
