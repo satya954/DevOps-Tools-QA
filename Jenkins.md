@@ -15,6 +15,7 @@
 7. How to Achieve the skipping the QA Person ?
 
 8. 
+## Questions & Answers
 
 </details>
 <summary>In general, what do you need in order to communicate?</summary><br><b>
@@ -23,4 +24,5 @@
   - A way to address who you want to communicate with
   - A Connection (so the content of the communication can reach the recipients)
 
-</b></details>
+</b>
+</details>
