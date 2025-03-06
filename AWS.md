@@ -34,7 +34,7 @@
 29. Explain the Shared Responsibility Model in AWS.
 30. What are AWS Tags and why are they used?
 
-⭐️ Intermediate Level
+## ⭐️ Intermediate Level
 31. How do you secure data at rest and in transit in AWS?
 32. Explain the difference between AWS S3 Standard and S3 Glacier.
 33. How does AWS S3 versioning work?
@@ -66,7 +66,7 @@
 59. How do you manage secrets in AWS?
 60. Explain AWS Systems Manager.
 
-⭐️ Advanced Level
+## ⭐️ Advanced Level
 61. What is the difference between horizontal and vertical scaling in AWS?
 62. How does AWS Lambda handle cold starts?
 63. What is a VPC peering connection and how does it work?
