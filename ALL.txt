@@ -88,6 +88,54 @@
 
 ######################################################### Person 3 ######################################################################
 
+1.A critical application is running slow, and customers are complaining. How would you troubleshoot the issue?
+
+2.A deployment went wrong and broke production. How would you roll back quickly?
+
+3.Your monitoring tool is not alerting on system failures. How would you debug this?
+
+4.A developer accidentally ran a script that deleted all files in a cloud storage bucket. What steps would you take to recover and prevent this in the future?
+
+5.Your production Kubernetes cluster is running out of resources. How would you identify and resolve the issue?
+
+6.Your CI/CD pipeline takes too long to complete. How would you speed it up?
+
+7.A newly deployed feature is breaking production, but it works in staging. How would you investigate the issue?
+
+8.How would you implement blue-green deployments in a Kubernetes environment?
+
+9.What are the best practices to prevent deployment failures in a CI/CD pipeline?
+
+10.A rollback was triggered due to an issue, but the rollback also failed. What steps would you take?
+
+11.A security scan in your pipeline detected vulnerabilities in dependencies. How would you handle this?
+
+12.How do you implement least privilege access in AWS/Azure for DevOps pipelines?
+
+13.How would you secure a Kubernetes cluster running in the cloud?
+
+14.What are the security risks of using third-party container images, and how do you mitigate them?
+
+15.You suspect a security breach in your cloud infrastructure. How would you investigate and contain the issue?
+
+16.Your cloud costs have increased unexpectedly. How would you identify and optimize the costs?
+
+17.How do you handle secret management in a cloud-native environment?
+
+18.What strategies would you use to migrate on-prem workloads to the cloud with minimal downtime?
+
+19.A specific region of your cloud provider is down. How would you ensure high availability?
+
+20.How would you implement auto-scaling in a cloud environment for a high-traffic application?
+
+21. A new junior engineer accidentally deleted a production database. What immediate actions would you take, and how would you prevent this from happening again? 
+
+
+######################################################## Person 4 ########################################################
+
+
+
+
 
 
 
