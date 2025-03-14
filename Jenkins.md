@@ -1,20 +1,57 @@
 				**Jenkins Interview Questions:**
 
-1. What is CI/CD Pipeline ?
+## Q1. What is CI/CD Pipeline ?
+**A:** A CI/CD pipeline is an automated workflow used to build, test and deploy softwares. It ensures that code changes are integrated, verified and deployed without human intervention. 
 
-2. What are the steps involved in Jenkins Pipeline ?
+## Q2:
+**A:**
 
-3. Describe about SCM ?
+## Q3. What are the steps involved in Jenkins Pipeline ?
+**A:** Jenkins pipelines automates the application build,Quality checks, tests and Deployment process.
+Jenkins pipelines are two types. 
+1. Declarative
+2. Scripted
+   Steps Names: Code Checkout, Build, Quality Gates, Unit tests, Deployment.
 
-4. How many Pipelines you built ?
+## Q4. Describe about SCM ?
+**A:**
 
-5. Different types of Pipeline ?
+## Q5. How many Pipelines you built ?
+**A:** 
 
-6. Build Quality Gates ?
+## Q6. Different types of Pipeline ?
+**A:** Declarative and Scripted.
 
-7. How to Achieve the skipping the QA Person ?
+## Q7. What are Build Quality Gates ?
+**A:** Build Quality gates are pre-defined checks or conditions, that a software build must pass before progessing to the next step.
+Key Aspects of Build Quality gates:
+. Automation testing
+. Code Quality Checks
+. Vulnerabilites checks
+. Perfomance Benchmarks.
+Eg: SonarQube will be used as Build Quality gate in Jenkins.   
 
-8. 
+## Q9. How to Achieve the skipping the QA Person ?
+**A:** We can skip the QA approval's or tests by using the not condition in the check steps.
+
+pipeline {
+    agent any
+    parameters {
+        booleanParam(name: 'SKIP_QA', defaultValue: false, description: 'Skip QA Testing')
+    }
+    stages {
+      stage('QA Approval') {
+            **when {
+                expression { return !params.SKIP_QA }  // Skip if SKIP_QA is true
+            }**
+            steps {
+                input message: "QA Approval Needed. Proceed?"
+            }
+        }
+  }
+}
+
+## Q10. 
 ## Questions & Answers
 
 </details>
