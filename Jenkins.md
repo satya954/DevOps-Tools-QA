@@ -11,7 +11,7 @@
 - Jenkins pipelines are two types. 
   1. Declarative
   2. Scripted
-- Steps Names: Code Checkout, Build, Quality Gates, Unit tests, Deployment.
+--- Steps Names: Code Checkout, Build, Quality Gates, Unit tests, Deployment.
 
 ## Q4. Describe about SCM ?
 **A:**
