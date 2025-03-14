@@ -8,10 +8,10 @@
 
 ## Q3. What are the steps involved in Jenkins Pipeline ?
 **A:** Jenkins pipelines automates the application build,Quality checks, tests and Deployment process.
-Jenkins pipelines are two types. 
-1. Declarative
-2. Scripted
-   Steps Names: Code Checkout, Build, Quality Gates, Unit tests, Deployment.
+- Jenkins pipelines are two types. 
+  1. Declarative
+  2. Scripted
+- Steps Names: Code Checkout, Build, Quality Gates, Unit tests, Deployment.
 
 ## Q4. Describe about SCM ?
 **A:**
@@ -24,16 +24,17 @@ Jenkins pipelines are two types.
 
 ## Q7. What are Build Quality Gates ?
 **A:** Build Quality gates are pre-defined checks or conditions, that a software build must pass before progessing to the next step.
-Key Aspects of Build Quality gates:
-. Automation testing
-. Code Quality Checks
-. Vulnerabilites checks
-. Perfomance Benchmarks.
-Eg: SonarQube will be used as Build Quality gate in Jenkins.   
+## Key Aspects of Build Quality gates:
+- Automation testing
+- Code Quality Checks
+- Vulnerabilites checks
+- Perfomance Benchmarks.
+- Eg: SonarQube will be used as Build Quality gate in Jenkins.   
 
 ## Q9. How to Achieve the skipping the QA Person ?
 **A:** We can skip the QA approval's or tests by using the not condition in the check steps.
-
+```bash
+echo "
 pipeline {
     agent any
     parameters {
@@ -49,7 +50,8 @@ pipeline {
             }
         }
   }
-}
+}"
+```
 
 ## Q10. 
 ## Questions & Answers
