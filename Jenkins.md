@@ -1,7 +1,19 @@
 				**Jenkins Interview Questions:**
 
 ## Q1. What is CI/CD Pipeline ?
-**A:** A CI/CD pipeline is an automated workflow used to build, test and deploy softwares. It ensures that code changes are integrated, verified and deployed without human intervention. 
+**A:** A CI/CD pipeline is an automated workflow used to build, test and deploy softwares. It ensures that code changes are integrated, verified and deployed without human intervention.
+## Stages in CI- Continous Integration.
+- Code checkout
+- Build
+- Quality checks
+- Unit tests
+- Upload to artifactory
+## Stages in CD - Continous Deployment / Delivery
+- Deploy to Staging (PreProd)
+- Testing the application
+- QA approval (optional)
+- Deploy to Production
+- Monitoring & Rollback (if required)
 
 ## Q2:
 **A:**
@@ -11,7 +23,7 @@
 - Jenkins pipelines are two types. 
   1. Declarative
   2. Scripted
---- Steps Names: Code Checkout, Build, Quality Gates, Unit tests, Deployment.
+- Steps Names: Code Checkout, Build, Quality Gates, Unit tests, Deployment.
 
 ## Q4. Describe about SCM ?
 **A:**
@@ -52,15 +64,5 @@ pipeline {
 }
 ```
 
-## Q10. 
-## Questions & Answers
-
-</details>
-<summary>In general, what do you need in order to communicate?</summary><br><b>
-
-  - A common language (for the two ends to understand)
-  - A way to address who you want to communicate with
-  - A Connection (so the content of the communication can reach the recipients)
-
-</b>
-</details>
+## Q10. Question here
+**A:**
