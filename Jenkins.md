@@ -1,7 +1,7 @@
 				**Jenkins Interview Questions:**
 
 ## Q1. What is CI/CD Pipeline ?
-**A:** A CI/CD pipeline is an automated workflow used to build, test and deploy softwares. It ensures that code changes are integrated, verified and deployed without human intervention.
+**A:** A CI/CD pipeline is an automated workflow used to build, test and deploy softwares. It ensures that code changes are integrated, verified and deployed with minimal human intervention.
 ## Stages in CI- Continous Integration.
 - Code checkout
 - Build
