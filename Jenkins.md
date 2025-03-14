@@ -34,7 +34,6 @@
 ## Q9. How to Achieve the skipping the QA Person ?
 **A:** We can skip the QA approval's or tests by using the not condition in the check steps.
 ```bash
-echo "
 pipeline {
     agent any
     parameters {
@@ -50,7 +49,7 @@ pipeline {
             }
         }
   }
-}"
+}
 ```
 
 ## Q10. 
