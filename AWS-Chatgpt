@@ -1,0 +1,133 @@
+What is AWS?Amazon Web Services (AWS) is a cloud computing platform offering infrastructure, storage, networking, and security solutions.
+
+What are the key services provided by AWS?
+
+Compute: EC2, Lambda
+
+Storage: S3, EBS, EFS
+
+Databases: RDS, DynamoDB
+
+Networking: VPC, Route 53
+
+Security: IAM, KMS, Security Groups
+
+What is EC2 in AWS?Amazon EC2 (Elastic Compute Cloud) provides scalable virtual machines in the cloud.
+
+What is an S3 bucket?S3 (Simple Storage Service) is an object storage service for storing files and backups.
+
+Explain the difference between S3 and EBS.
+
+S3: Object storage for files, backups, and static content.
+
+EBS: Block storage used as a disk for EC2 instances.
+
+What is IAM in AWS?IAM (Identity and Access Management) controls access to AWS services and resources securely.
+
+How does AWS VPC work?VPC (Virtual Private Cloud) enables the creation of isolated networks within AWS.
+
+What are Security Groups and how do they work?Security Groups act as firewalls, controlling inbound and outbound traffic to AWS resources.
+
+What is an AWS region?A region is a geographic location where AWS has data centers.
+
+What are Availability Zones in AWS?Availability Zones (AZs) are multiple, isolated locations within a region for redundancy.
+
+What is Auto Scaling?Auto Scaling automatically adjusts EC2 instances based on demand.
+
+What is Elastic Load Balancing?ELB distributes incoming traffic across multiple EC2 instances for better performance.
+
+What is Route 53?AWS’s scalable DNS and domain name registration service.
+
+Explain the difference between a public and private subnet.
+
+Public Subnet: Accessible from the internet, uses Internet Gateway.
+
+Private Subnet: No direct internet access, uses NAT Gateway.
+
+What is CloudFormation?Infrastructure as Code (IaC) service for managing AWS resources using templates.
+
+What is AWS Lambda?A serverless compute service that runs code in response to events.
+
+What is Amazon RDS?A managed relational database service supporting MySQL, PostgreSQL, and more.
+
+How do you monitor AWS resources?Using AWS CloudWatch, CloudTrail, and AWS Config.
+
+What is Amazon DynamoDB?A fully managed NoSQL database for high availability and performance.
+
+What is AWS Elastic Beanstalk?A PaaS for deploying and managing applications without managing the infrastructure.
+
+What is Amazon CloudFront?A Content Delivery Network (CDN) for delivering content with low latency.
+
+Explain Amazon SNS.Simple Notification Service (SNS) enables messaging between distributed applications.
+
+What is the difference between RDS and DynamoDB?
+
+RDS: SQL-based, structured data.
+
+DynamoDB: NoSQL, high scalability.
+
+What are EIPs (Elastic IPs)?Static public IPs that can be assigned to EC2 instances.
+
+How does AWS CloudTrail work?CloudTrail logs and monitors AWS API calls for security and compliance.
+
+What is Amazon CloudWatch?A monitoring service for AWS resources and applications.
+
+What is the AWS Free Tier?A limited free usage tier for new AWS customers.
+
+What is a NAT Gateway?A NAT Gateway allows instances in a private subnet to access the internet securely.
+
+Explain the Shared Responsibility Model in AWS.AWS manages infrastructure security, while customers secure their applications and data.
+
+What are AWS Tags and why are they used?Tags are metadata labels for organizing AWS resources.
+
+How do you troubleshoot VPC issues?Using VPC Flow Logs, route tables, and security group analysis.
+
+What is the difference between NACL and Security Groups?
+
+NACL: Stateless, applies to subnets.
+
+Security Group: Stateful, applies to instances.
+
+How do you communicate between multiple VPCs?
+
+VPC Peering (direct connection)
+
+Transit Gateway (scalable interconnection)
+
+What is a VPC Endpoint?A private connection to AWS services without internet exposure.
+
+What is Transit Gateway?A scalable hub for connecting multiple VPCs and on-premises networks.
+
+How do you attach EC2 to an S3 bucket and what policies are used?
+
+Use IAM roles with AmazonS3FullAccess or custom policies.
+
+What is a Trusted Role in IAM?An IAM role that allows an AWS service or another account to access resources.
+
+What is the difference between IAM Users and IAM Roles?
+
+IAM User: Assigned to individuals with specific credentials.
+
+IAM Role: Assigned to AWS services or federated users.
+
+How do you secure data at rest and in transit in AWS?
+
+At Rest: Use encryption (S3, EBS, RDS, DynamoDB).
+
+In Transit: Use TLS/SSL.
+
+Explain the difference between AWS S3 Standard and S3 Glacier.
+
+S3 Standard: Low-latency, frequently accessed data.
+
+S3 Glacier: Archival storage, low cost, retrieval delays.
+
+How does AWS S3 versioning work?Maintains multiple versions of objects to prevent accidental deletions.
+
+What is AWS ElastiCache?A managed caching service supporting Redis and Memcached.
+
+Explain the concept of a Bastion Host.A jump server providing secure access to private instances.
+
+How do you implement high availability in AWS?Using multiple Availability Zones, Load Balancers, and Auto Scaling.
+
+What is AWS Direct Connect?A dedicated network connection between on-premises and AWS.
