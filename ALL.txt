@@ -1,4 +1,5 @@
-################# Person 1 ###########################
+                              ################# Person 1 ###########################
+
 ✅ Regarding Self Introduction and DevOps:
 1) Could you Please Introduce yourself Briefly about your background and your project ?
 2) What Does DevOps Means and how DevOps is Different from Other Department in IT Industry ?
@@ -6,10 +7,12 @@
 4) Could you please Explain me About your last project have you worked on and what was you roles and responsibility ?
 
 ✅ About Linux OS:
-1) What are Different OS have you Familiar with and worked on ?
-2) What is Kernel ?
-3) which Linux version you used in your project ?
-4) why we Used Linux OS Rather than Windows and any other ?
+1. What are Different OS have you Familiar with and worked on ?
+2. What is Kernel ?
+3. which Linux version you used in your project ?
+4. why we Used Linux OS Rather than Windows and any other ?
+5. Write a shell script to check the permissions of a specific directory for a special user.
+
 
 ✅ About Git GitHub and Gitlab:
 1) What is Git, GitHub and Gitlab what is the difference between them ?
