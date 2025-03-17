@@ -1,4 +1,4 @@
-				**Jenkins Interview Questions:**
+				##### Jenkins Interview Questions: #######
 
 ## Q1. What is CI/CD Pipeline ?
 **A:** A CI/CD pipeline is an automated workflow used to build, test and deploy softwares. It ensures that code changes are integrated, verified and deployed with minimal human intervention.
@@ -16,7 +16,7 @@
 - Monitoring & Rollback (if required)
 
 ## Q2:
-**A:**
+**A**: 
 
 ## Q3. What are the steps involved in Jenkins Pipeline ?
 **A:** Jenkins pipelines automates the application build,Quality checks, tests and Deployment process.
@@ -64,5 +64,11 @@ pipeline {
 }
 ```
 
-## Q10. Question here
+## Q10. How can you define CI/CD pipeline for an Java Applications.
 **A:**
+
+## Q11: Why use GITHUB Actions if we have lots of CI/CD tools Available in Market?
+**A**: 
+
+
+
