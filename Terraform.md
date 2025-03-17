@@ -3,7 +3,18 @@
 1. Resources alreadt exists in the Cloud, so how to configure it with terraform ?
 2. What is back end in Terraform.
 3. In terraform you create and automate but somebody manually change the file or Resources how do you troubleshoot ?
-4. In Terraform you create Ec2 instance 1 then you want to create 10 instance how do create
+4. In Terraform you create Ec2 instance 1 then you want to create 10 instance how do create ?
+5. Terraform Directory Structure?
+6. what is state file in Terrform?
+7. Locals in Terraform?
+8. Variables in Terraform (Input, Output)?
+9. How you can create an storage account in three different location with three different Name?
+10. How do you import manually created AWS resources into Terraform?
+11. Why should we run terraform plan before terraform apply?
+12. What happens if cloud infrastructure changes between terraform plan and terraform apply?
+13. If a Virtual Machine is already exists and you write the same Terraform configuration, what happens when you run Terraform commands?
+14. 
+
 
 
                                   ## Scenario Based Question & Answers ##
