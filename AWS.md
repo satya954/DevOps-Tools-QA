@@ -1,7 +1,5 @@
 
-70 AWS interview questions ranging from beginner to advanced levels:
-
-
+############################ AWS Interview Questions & Answers #########################
 ⭐️ Beginner Level
 1. What is AWS?
 2. What are the key services provided by AWS?
@@ -33,6 +31,18 @@
 28. What is a NAT Gateway?
 29. Explain the Shared Responsibility Model in AWS.
 30. What are AWS Tags and why are they used?
+31. How do you troubleshoot VPC issues.
+32. What is difference between NACL and SG in VPC
+33. How do communicate 4 or 5 VPC
+34. What is VPC end point
+35. What is Transit Gate way.
+36. You create EC2 and S3 how can attach ec2 to s3 what policies is used.
+37. What is Trusted role in IAM.
+38. What is the difference between IAM Users and IAM Roles?
+39. 
+40. 
+41.
+
 
 ## ⭐️ Intermediate Level
 31. How do you secure data at rest and in transit in AWS?
@@ -77,7 +87,11 @@
 68. What are AWS Organizations?
 69. How do you optimize costs in AWS?
 70. What are the best practices for securing an AWS environment?
+71. How do you configure a Load Balancer to allow only a specific port for internet traffic?
+72. How will you connect an EC2 instance in a private subnet to an S3 bucket?
+73. Why do we need a Security Group (SG) for an EC2 instance in a private subnet?
+74. 
 
-
+## Person 1 ##
 
 ..
