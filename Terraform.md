@@ -52,4 +52,40 @@
 ## Q10) What happens if you lose access to the remote backend storing your state?
 **A**: All Terraform operations fail until access is restored. Teams can't collaborate, and changes can't be applied safely. This effectively blocks all infrastructure changes.
 
+## Q11: Why do we use the Kubernetes provider in Terraform when we already have EKS in AWS or AKS in Azure?
+**A**: EKS and AKS are managed Kubernetes services, but they only provide the control plane. To manage Kubernetes resources (like deployments, services, and config maps) within the cluster, we use the Kubernetes provider in Terraform. It allows us to define and manage cluster resources declaratively, ensuring consistency and automation in infrastructure provisioning.
+
+## Q12: What is the difference between Terraform count and for_each?
+**A**: count is used when you need to create multiple identical resources. It works with lists and numerical values.
+for_each is used when you need to create resources dynamically from a map or a set, ensuring better control and flexibility. Use count for simple replication and for_each for more complex configurations.
+
+## Q13: How does Terraform handle state management, and why is it important? 
+**A**: Terraform uses a state file (terraform.tfstate) to track the real-world infrastructure and manage updates efficiently. 
+The state file helps:
+✅ Maintain resource dependencies
+✅ Speed up plan and apply processes
+✅ Avoid resource duplication
+For team collaboration, it's recommended to store state remotely (e.g., AWS S3, Azure Blob Storage, or Terraform Cloud) to prevent conflicts.
+
+## Q14: What is the purpose of terraform import, and how does it work?
+**A**: Terraform import allows Terraform to take control of existing infrastructure that wasn’t originally created using Terraform. It brings external resources into the Terraform state but does not generate the corresponding configuration files automatically.
+To complete the process, you need to manually define the resource in your .tf files.
+
+## Q15: How can you prevent accidental deletions of resources in Terraform?
+**A**:  You can use the prevent_destroy lifecycle rule in Terraform to ensure critical resources are not deleted accidentally.
+``resource "aws_s3_bucket" "example" {
+ bucket = "my-important-bucket"
+
+ lifecycle {
+ prevent_destroy = true
+ }
+}``
+This ensures that even if a terraform destroy or a change attempts to delete the resource, Terraform will throw an error, protecting essential infrastructure.
+
+## Q16: 
+**A**: 
+## Q11:
+**A**: 
+## Q11: 
+## Q11: 
 
