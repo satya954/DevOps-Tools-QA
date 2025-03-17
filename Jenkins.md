@@ -70,5 +70,11 @@ pipeline {
 ## Q11: Why use GITHUB Actions if we have lots of CI/CD tools Available in Market?
 **A**: 
 
+How do you execute parallel jobs in Jenkins?
+
+What if the GitHub plugin crashes in Jenkins? How will you handle this situation?
+
+Explain CI/CD.
+
 
 
