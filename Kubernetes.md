@@ -2,13 +2,15 @@
 
 				---------- Beginner Level: -----------
  
-1. What is Kubernetes. ?
-Ans:
+## Q1. What is Kubernetes. ?
+**A**:
 
-2. What are the main components of Kubernetes ?
-Ans:
+## Q2. What are the main components of Kubernetes ?
+**A**:
 
-3. What is a Pod in Kubernetes ?
+## Q3.. What is a Pod in Kubernetes ?
+**A**:
+
 4. What is a Replicaset ?
 5. What is a Deployment ?
 6. What is a DaemonSet ?
@@ -43,6 +45,7 @@ Ans:
 24. 
 
  				---------- Intermediate Level: -----------
+    
 1. What is a stateful set in Kubernetes ?
 2. Explain the diff b/w a Deployment and Stateful Set ?
 3. How does kubernetes handle storage for applications ?
@@ -100,6 +103,30 @@ Ans:
 
 
 				## Scenarios Based Questions & Answers ##
+
+## IMP Q1: How do you recover a lost Kubernetes cluster if the etcd data is corrupted?
+**A**: Check if etcd snapshots were taken (etcdctl snapshot restore).
+If a snapshot isn’t available, attempt disaster recovery by:
+i. Scaling down control plane nodes.
+ii. Checking if any nodes still have valid etcd data.
+iii. Restoring from a secondary backup system.
+If all else fails, rebuild the cluster and reapply workloads from stored YAML files or Helm charts.
+
+## IMP Q2: Your Kubernetes nodes are in Ready state, but pods are not scheduling. What do you check?
+**A**: kubectl describe node <node-name> → Look for taints & tolerations issues.
+kubectl get events -A → Check for insufficient resources (CPU, memory).
+kubectl get pods -o wide → Ensure pods are not stuck in Pending state due to scheduling constraints.
+Node affinity rules (requiredDuringSchedulingIgnoredDuringExecution) could be misconfigured.
+Check API server logs if nodes aren't communicating properly.
+
+## IMP Q3: How do you troubleshoot intermittent network failures between Kubernetes pods?
+**A**: Run ``kubectl exec -it <pod> -- ping <target-pod>`` to check connectivity.
+Verify ``kubectl get pods -o wide`` to ensure pods are on the correct nodes.
+``kubectl describe networkpolicy`` to check if Network Policies are blocking traffic.
+Check the CNI plugin (Calico, Flannel, Cilium) logs for any failures.
+Use tcpdump or wireshark on the node to inspect dropped packets.
+Enable Kubernetes Debugging with ephemeral containers (kubectl debug).
+
 ## Q1: What happens if the k8s master node and worker node firewall gets broken?
 **A:**  Existing pods will continue running, but you can't deploy new workloads or updates. API server can't communicate with worker nodes, breaking cluster management capabilities.
 
