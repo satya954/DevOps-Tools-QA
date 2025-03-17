@@ -114,10 +114,10 @@ If all else fails, rebuild the cluster and reapply workloads from stored YAML fi
 
 ## IMP Q2: Your Kubernetes nodes are in Ready state, but pods are not scheduling. What do you check?
 **A**: kubectl describe node <node-name> → Look for taints & tolerations issues.
-kubectl get events -A → Check for insufficient resources (CPU, memory).
-kubectl get pods -o wide → Ensure pods are not stuck in Pending state due to scheduling constraints.
-Node affinity rules (requiredDuringSchedulingIgnoredDuringExecution) could be misconfigured.
-Check API server logs if nodes aren't communicating properly.
+i. kubectl get events -A → Check for insufficient resources (CPU, memory).
+ii. kubectl get pods -o wide → Ensure pods are not stuck in Pending state due to scheduling constraints.
+iii. Node affinity rules (requiredDuringSchedulingIgnoredDuringExecution) could be misconfigured.
+iv. Check API server logs if nodes aren't communicating properly.
 
 ## IMP Q3: How do you troubleshoot intermittent network failures between Kubernetes pods?
 **A**: Run ``kubectl exec -it <pod> -- ping <target-pod>`` to check connectivity.
