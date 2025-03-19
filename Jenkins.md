@@ -162,7 +162,8 @@ You can trigger Jenkins jobs automatically using:
 
 ---
 ### **13.  How to Achieve the skipping the QA Person ?
-**Answer:** We can skip the QA approval's or tests by using the not condition in the check steps.
+**Answer:** 
+We can skip the QA approval's or tests by using the not condition in the check steps.
 ```bash
 pipeline {
     agent any
@@ -183,7 +184,8 @@ pipeline {
 ```
 ---
 ### **14. What are Build Quality Gates ?
-**Answer:** Build Quality gates are pre-defined checks or conditions, that a software build must pass before progessing to the next step.
+**Answer:** 
+Build Quality gates are pre-defined checks or conditions, that a software build must pass before progessing to the next step.
 ## Key Aspects of Build Quality gates:
 - Automation testing
 - Code Quality Checks
