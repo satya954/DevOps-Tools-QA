@@ -1,6 +1,4 @@
----
-
-              			      **Interview Questions**:
+                  			      **Interview Questions**:
 ---
 ### 1. How would you ensure that a specific package is installed on multiple servers?
 **Answer:** You can use the **package** module in a playbook to ensure that a specific package is installed across multiple servers. 
@@ -43,7 +41,7 @@ Create a Playbook: Write a playbook that includes tasks for pulling the applicat
 ---
 
 
-**Ansible Interview Questions & Answers for 7+ Years Experience**
+                          **Ansible Interview Questions & Answers for 7+ Years Experience**
 
 ---
 
