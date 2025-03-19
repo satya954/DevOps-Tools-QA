@@ -161,7 +161,7 @@ You can trigger Jenkins jobs automatically using:
 3. Use **Kubernetes Plugin** for dynamic agent provisioning.
 
 ---
-### **13.  How to Achieve the skipping the QA Person ?
+### **13. How to Achieve the skipping the QA Person ?
 **Answer:** 
 We can skip the QA approval's or tests by using the not condition in the check steps.
 ```bash
