@@ -169,12 +169,52 @@
 
 
 ######################################################## Person 5 ########################################################
-..
+1. Diffrence between GIT and SVN?
+2. Conflicts you have faced in git?
+3. What is git rebase?
+4. Difference between rebase and merge?
+5. Difference betwen git fetch and git pull?
+6. will git pull will pull all brances or the perticular branch?
+7. What activities you do in Jenkins?
+8. How to setup master slave for jenkins? and what advantage you will git in master slave?
+9. How to add slaves automatically in jenkins cluster?
+10. What kind of authentication process you using in jenkins? difference between role based and project based access.
+11. How you handle Jenkins backup?
+12. what are the types of pipline?
+13. Can you write jenkins pipeline? write it for building the code and pushing it to nexus repository.
+14. What are phases in Maven?
+15. Why maven take less time second time?
+16. Difference between web server and application server.
+17. Purchasing options in EC2?
+18. Difference between spot intance and on demand instances? what is reserved instances?
+19. Got alret that linux file system is full in how would you increase it?
+20. What all File system type are there in Linux?
+21. I have lost ssh key for EC2 intance how to login on server now?
+22. Difference between SG and NACL?
+23. Have you used server less service in AWS?
+24. What is major difference between ALB and NLB? What is listners in LB? Ports and Protocols in LBs.
+25. How to connect 20+ VPC to each other?
+26. what all are storage classes available in S3 and difference?
+27. How to access objects which are stored in glacier?
+28. Diffrence between IAM roles and policies.
+29. What kind of work you have done on cloud watch and SNS?
+30. What is route53? What is HOSTZONE? What are record set available in DNS? Which record we use for Load balancer?
+31. How to replace CPU utilization with memory utilization in a file (Shell Scripting?
+32. how to login in docker container?
+33. Can we install vim in running container?
+34. Make sure jenkins service should be running after start and stop of container how would you configure it?
+35. What is backend in terraform?
+36. What are resources you have launched using terraform.
+37. What are different objects in K8s.
+38. Difference between clusterIp and Nodeport?
+39. When would you use Loadbalance service?
+40. How the rollback you are managing?
+41. what is bluegreen deployment.
+42. How would you troubleshoot a crashloop back pod.
 
 
 
-
-
+######################################################## Person 6 ########################################################
 
 
 
