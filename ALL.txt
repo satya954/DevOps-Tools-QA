@@ -20,27 +20,60 @@
 3) How do you revert a commit in Git ?
 4) Explain the difference between Git pull and Git fetch ?
 5) Explain the Branching Strategies have you used in your project
+6) How do you automate deployment rollbacks in ArgoCD?
+7) What’s the purpose of .gitkeep and how is it different from .gitignore?
+8) How would you perform a force push safely in a shared repository?
 
 ✅ About CICD with Jenkins:
 1) what is CICD and explain me the Jenkins file and Its Stages ?
 2) In which phase Testing will do In CI phase or in CD phase ?
 3) how did you used Jenkins in your project ?
 4) Describe the process of setting up a Jenkins job to automate a build process ?
+5) How do you implement parallel job execution in a Jenkins declarative pipeline?
+6) Explain the difference between pipeline-as-code and traditional pipelines ?
+7) How do you integrate Slack or MS Teams notifications in CI/CD workflows?
+8) What steps would you take if a deployment step fails midway in a GitLab pipeline?
 
-✅ About Docker and K8S:
+✅ About Docker:
 1) What Does mean by containerization and Orchestration ?
 2) What is a Docker image, and how is it different from a Docker container?
 3) How do you manage data persistence in Docker containers?
 4) Have you Used docker Compose ?
 5) could you Explain me a Docker File for Node ?
-6) How do you secure a MySQL Data which is Running in my container ?
-7) what is Ingress and Deployment in K8S ?
-8) what is Services in K8S ?
-9) How can K8S control and manage a containers ?
+6) How do you scan Docker images for vulnerabilities before pushing to a registry?
+7) Explain multi-stage builds in Docker and their benefits.
+8) How do you handle secrets while building Docker images in a CI pipeline?
+9) What’s the impact of using :latest tag in production environments?
+
+✅ Kubernetes:
+1) How do you secure a MySQL Data which is Running in my container ?
+2) what is Ingress and Deployment in K8S ?
+3) what is Services in K8S ?
+4) How can K8S control and manage a containers ?
+5) How do you implement resource limits and requests in Kubernetes pods?
+6) What are sidecar containers and how are they used in a service mesh architecture?
+7) Explain the use of Kubernetes Network Policies with examples.
+8) What’s the difference between StatefulSets and Deployments?
+
+✅ Cloud:
+1) What is the difference between Infrastructure as Code and Configuration as Code?
+2) How do you manage access control across multiple Azure subscriptions?
+
+✅ Terraform:
+1) How do you use Terraform to provision resources in multiple regions?
+
+✅ Monitoring:
+1) How do you troubleshoot high CPU usage in Kubernetes pods?
+2) What’s the difference between blackbox and whitebox monitoring?
+3) How do you visualize application logs with Loki and Grafana?
+
+🚀 Scripting & Infrastructure Automation
+Write a Bash script to list pods in a namespace and restart those in CrashLoopBackOff.
+How do you schedule a recurring backup of cloud storage using Python?
+Automate EC2 instance tagging based on environment using Terraform.
 
 ✅ Some Scenarios Questions:
 1) Your company is planning to implement a disaster recovery (DR) strategy for its critical services hosted on AWS. Describe the steps you would take to design and implement a robust DR plan, including backup strategies, failover mechanisms, and testing procedures.
-
 
 
 ################################# Person 2 #######################
