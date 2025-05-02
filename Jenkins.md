@@ -195,3 +195,183 @@ Build Quality gates are pre-defined checks or conditions, that a software build 
 
 ---
 
+
+## ✅ CI/CD with Jenkins
+
+**Q1**. **What is CI/CD and explain the Jenkinsfile and its stages?**
+  - **CI/CD** stands for **Continuous Integration/Continuous Deployment**:
+    - **Continuous Integration (CI)**: The practice of automatically integrating code changes into the main branch multiple times a day, followed by automated testing.
+    - **Continuous Deployment (CD)**: The practice of automatically deploying the integrated code changes to production after successful testing.
+  - **Jenkinsfile**: A text file that contains the definition of the Jenkins pipeline. It describes the stages and steps for automating the build, test, and deploy processes.
+    - **Stages in Jenkinsfile**:
+      1. **Build**: Compiling the code or building artifacts.
+      2. **Test**: Running unit tests, integration tests, etc.
+      3. **Deploy**: Deploying the application to staging or production.
+      4. **Post**: Actions to be performed after the pipeline stages like notifications, archiving artifacts, etc.
+
+**Q2**. **In which phase is testing done, CI or CD?**
+  - Testing is done in the **CI phase**, typically after the build process and before deployment to ensure that the code changes are functional and don't break existing functionality.
+
+**Q3**. **How have you used Jenkins in your project?**
+  - I have used Jenkins to automate:
+    - **Build and Test Pipelines**: Automatically building and testing code after every commit.
+    - **Deployment Pipelines**: Automating the deployment of microservices and containerized applications to staging and production environments.
+    - **Notification Integration**: Sending notifications to Slack or email for build statuses.
+
+**Q4**. **Describe the process of setting up a Jenkins job to automate builds.**
+  - Steps:
+    1. Create a new job (freestyle project or pipeline).
+    2. Define the source code repository (GitHub, GitLab, etc.).
+    3. Configure the build triggers (e.g., on commit or pull request).
+    4. Add build steps (e.g., running a shell script, executing a build tool like Maven).
+    5. Add post-build actions (e.g., sending notifications or archiving build artifacts).
+    6. Save and trigger the job manually or based on the configured trigger.
+
+**Q5**. **How do you implement parallel job execution in a Jenkins declarative pipeline?**
+  - In a declarative pipeline, use the `matrix` block to run parallel jobs:
+    ```groovy
+    pipeline {
+        agent any
+        stages {
+            stage('Build') {
+                parallel {
+                    stage('Build Module A') {
+                        steps {
+                            echo 'Building Module A'
+                        }
+                    }
+                    stage('Build Module B') {
+                        steps {
+                            echo 'Building Module B'
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ```
+
+**Q6**. **Explain the difference between pipeline-as-code and traditional pipelines.**
+  - **Pipeline-as-Code**: The pipeline configuration is stored in version control as code (e.g., a Jenkinsfile), allowing for easier management, versioning, and sharing.
+  - **Traditional Pipelines**: These are set up manually in the Jenkins UI, often resulting in less flexibility and poor traceability.
+
+**Q7**. **How do you integrate Slack or MS Teams notifications?**
+  - Use the **Slack Notification Plugin** or **MS Teams Plugin** in Jenkins to send notifications:
+    - Configure a webhook in the desired platform (Slack/MS Teams).
+    - In the Jenkins pipeline, add a post-build action to send messages based on the build status:
+      ```groovy
+      post {
+        success {
+          slackSend (channel: '#builds', message: "Build Successful!")
+        }
+        failure {
+          slackSend (channel: '#builds', message: "Build Failed!")
+        }
+      }
+      ```
+
+**Q8**. **What steps would you take if a deployment fails midway in a GitLab pipeline?**
+  - **Investigate the logs**: Check the pipeline logs to identify where it failed.
+  - **Rollback**: If possible, rollback to the previous stable version.
+  - **Fix the issue**: Resolve the root cause (e.g., fix failing tests, incorrect configurations).
+  - **Trigger a new pipeline**: Once the issue is fixed, re-trigger the pipeline to deploy the updated version.
+
+**Q9**. **What kind of activities do you do in Jenkins?**
+  - I manage:
+    - **Job Configuration**: Creating and updating Jenkins jobs for building, testing, and deploying applications.
+    - **Pipeline Development**: Writing and managing Jenkinsfiles for automated pipelines.
+    - **Plugin Management**: Installing and configuring necessary plugins for various integrations.
+    - **Monitoring Builds**: Ensuring that build and deployment processes are working smoothly.
+
+**Q10**. **How to set up master-slave architecture in Jenkins? What advantages does it offer?**
+  - **Setup**:
+    1. Install Jenkins master on a central server.
+    2. Install Jenkins agent (slave) on another machine.
+    3. On the master Jenkins server, configure the agent under **Manage Jenkins > Manage Nodes**.
+    4. Set up the connection and select the necessary configuration.
+  - **Advantages**:
+    - **Distributed Build**: Distributes workloads to multiple machines, speeding up the build process.
+    - **Resource Optimization**: Use different machines for different purposes (e.g., testing, building).
+    - **Scalability**: Easily scale Jenkins infrastructure by adding more slaves.
+
+**Q11**. **How to add slaves automatically to a Jenkins cluster?**
+  - Use **Jenkins CLI** or **Cloud-based Jenkins agents**:
+    - If using AWS, configure Jenkins to use **EC2 instances as agents** that can be provisioned dynamically using plugins like **EC2 plugin**.
+    - Use **Jenkins Configuration as Code (JCasC)** to automate the configuration of agents.
+
+**Q12**. **What kind of authentication processes do you use in Jenkins? (Role-based vs. project-based)**
+  - **Role-based Authentication**: Configure user roles and permissions using plugins like **Role-based Authorization Strategy**. This assigns roles (e.g., admin, developer) with specific permissions.
+  - **Project-based Authentication**: Restrict access to certain projects based on user roles and assign different access levels to specific jobs.
+
+**Q13**. **How do you handle Jenkins backup?**
+  - Regularly backup Jenkins home directory, which contains configurations, job data, and build artifacts.
+  - **Automated Backup**: Use plugins like **ThinBackup** to automate the backup process.
+  - **Offsite Storage**: Store backups in remote locations (e.g., AWS S3 or a network drive) to ensure data durability.
+
+**Q14**. **What are the types of pipelines?**
+  - **Declarative Pipeline**: Provides a simpler syntax for creating pipelines in a structured way.
+  - **Scripted Pipeline**: A more flexible and programmatic approach, written in Groovy.
+  - **Multibranch Pipeline**: Automatically creates a pipeline for each branch in a Git repository.
+  - **Pipeline-as-Code**: Where the pipeline configuration is stored as a Jenkinsfile in version control.
+
+**Q15**. **Can you write a Jenkins pipeline for building and pushing to Nexus?**
+  - Example Jenkins pipeline for building and pushing an artifact to Nexus:
+    ```groovy
+    pipeline {
+        agent any
+        stages {
+            stage('Build') {
+                steps {
+                    script {
+                        // Build commands (e.g., Maven)
+                        sh 'mvn clean package'
+                    }
+                }
+            }
+            stage('Push to Nexus') {
+                steps {
+                    script {
+                        // Deploy to Nexus
+                        sh 'mvn deploy:deploy-file -Dfile=target/myapp.jar -DrepositoryId=nexus-repo -Durl=http://nexus.example.com/repository/releases'
+                    }
+                }
+            }
+        }
+    }
+    ```
+
+**Q16**. **What is Groovy and how is it used in Jenkins?**
+  - **Groovy** is a dynamic programming language used to define Jenkins pipelines.
+  - It allows for writing complex scripts, loops, and conditional logic within the Jenkinsfile, enabling dynamic build, test, and deployment processes.
+
+**Q17**. **Where do you save Jenkinsfiles?**
+  - Jenkinsfiles are typically stored in the **root of the project repository** (e.g., GitHub or GitLab). This allows versioning of the pipeline alongside the code.
+
+**Q18**. **In Jenkins, how can you get configurations back if lost?**
+  - **Backup**: If you regularly back up the Jenkins home directory, you can restore configurations from the backup.
+  - **Configuration as Code**: Use the **Jenkins Configuration as Code (JCasC)** plugin to store Jenkins configuration in YAML files in version control.
+
+**Q19**. **How are multiple pipelines triggered?**
+  - **Manual Trigger**: You can manually trigger multiple pipelines from the Jenkins UI.
+  - **Automatic Trigger**: Pipelines can be triggered automatically through **upstream-downstream jobs**, **Git commit hooks**, or **scheduled cron jobs**.
+
+**Q20**. **Create a Jenkins pipeline with 10 stages that executes stages based on input.**
+  - Example Jenkins pipeline:
+    ```groovy
+    pipeline {
+        agent any
+        stages {
+            stage('Stage 1') {
+                steps { input 'Continue to next stage?' }
+            }
+            stage('Stage 2') {
+                steps { echo 'Stage 2 executed' }
+            }
+            stage('Stage 3') {
+                steps { input 'Proceed to Stage 4?' }
+            }
+            // Continue similar for other stages
+        }
+    }
+    ```
+

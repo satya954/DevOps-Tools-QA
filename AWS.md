@@ -1,5 +1,62 @@
 
 ############################ AWS Interview Questions & Answers #########################
+## ✅ Cloud (AWS)
+
+**Q1**. **Difference between Infrastructure as Code vs. Configuration as Code?**
+  - **Infrastructure as Code (IaC)** refers to managing and provisioning computing infrastructure through machine-readable definition files rather than through physical hardware or interactive configuration tools. IaC helps automate the setup of servers, networks, storage, and other infrastructure components.
+    - Example: AWS CloudFormation, Terraform
+  - **Configuration as Code (CaC)** refers to managing system configurations such as system settings, software installation, and file configurations through scripts or declarative files. It focuses more on managing the configuration of applications or environments after provisioning infrastructure.
+    - Example: Ansible, Chef, Puppet
+
+**Q2**. **IAM roles and policies: Purpose and management.**
+  - **IAM roles** define a set of permissions that can be assigned to AWS resources, allowing users, groups, or services to perform specific actions on those resources. IAM roles can be assumed by trusted entities (e.g., EC2 instances, Lambda functions).
+  - **IAM policies** are documents that define permissions associated with IAM roles, groups, and users. These policies allow or deny actions on specific resources.
+    - Example: A policy that grants EC2 instances the ability to read from an S3 bucket.
+  - To manage IAM roles and policies, you can use the AWS Management Console, AWS CLI, or AWS SDKs.
+
+**Q3**. **What is AWS Lambda and how does it work?**
+  - **AWS Lambda** is a serverless compute service that runs code in response to events and automatically manages the compute resources required. You upload your code, specify the trigger (e.g., HTTP requests, S3 events), and Lambda takes care of execution and scaling.
+  - Lambda automatically scales based on the number of incoming events and can handle thousands of requests simultaneously.
+  - Lambda functions can be written in languages such as Python, Node.js, Java, Go, and more.
+
+**Q4**. **How do you invoke and configure Lambda?**
+  - You can invoke AWS Lambda in several ways:
+    - **Event-driven invocation**: Lambda can be invoked automatically when events occur in services like S3, DynamoDB, SNS, or API Gateway.
+    - **Direct invocation**: Lambda can be invoked directly using the AWS SDK or AWS CLI.
+    - **Scheduled invocation**: You can configure Lambda to run periodically by using Amazon CloudWatch Events or EventBridge to trigger it on a schedule (e.g., every hour).
+  - Lambda can be configured with environment variables, memory settings, timeout duration, and permissions (IAM role).
+
+**Q5**. **How does Lambda scale and manage events?**
+  - **Lambda scaling**: Lambda automatically scales based on the number of incoming requests. It can run multiple instances of the function in parallel, with each instance handling a separate event.
+  - **Event management**: Lambda can process a variety of event sources, including:
+    - **S3**: Triggers a Lambda function when a file is uploaded to an S3 bucket.
+    - **API Gateway**: Triggers Lambda in response to HTTP requests.
+    - **SNS**: Invokes Lambda when a message is published to an SNS topic.
+
+**Q6**. **What is CloudWatch and custom metrics?**
+  - **Amazon CloudWatch** is a monitoring and observability service for AWS resources and applications. It provides insights into system performance and resource utilization.
+  - **Custom metrics** are metrics you define for specific applications or resources that are not provided by default in CloudWatch. You can create custom metrics to monitor application-specific performance, logs, or operational data.
+  - Custom metrics can be published to CloudWatch using the AWS SDK or CloudWatch Agent.
+
+**Q7**. **How to attach SSL to an S3 bucket?**
+  - You cannot directly attach SSL certificates to an S3 bucket. Instead, you can use Amazon **CloudFront**, which is a content delivery network (CDN), to front your S3 bucket. CloudFront allows you to configure SSL/TLS certificates, enabling HTTPS access to your S3 bucket content.
+  - You can use **AWS Certificate Manager (ACM)** to provision an SSL certificate and configure it in CloudFront for SSL termination.
+
+**Q8**. **Difference between classic ELB, ALB, and NLB.**
+  - **Classic Load Balancer (CLB)**: The older version of Elastic Load Balancer that supports basic load balancing features such as HTTP/HTTPS and TCP traffic routing. It lacks advanced features.
+  - **Application Load Balancer (ALB)**: Provides advanced routing capabilities, such as content-based routing, WebSocket support, and host-based routing. It is ideal for HTTP and HTTPS traffic.
+  - **Network Load Balancer (NLB)**: Designed for high performance and low latency. It handles millions of requests per second for TCP, TLS, and UDP traffic. It is ideal for load balancing applications requiring extreme performance and static IP support.
+
+**Q9**. **How does ELB distribute traffic?**
+  - ELB distributes traffic by automatically routing incoming requests to healthy targets registered with the load balancer. It uses algorithms such as **round-robin** and **least outstanding requests** to efficiently distribute traffic to different instances or containers.
+  - Health checks are performed regularly to ensure that only healthy instances receive traffic.
+
+**Q10**. **What is auto-scaling and how does it work?**
+  - **Auto-scaling** is the process of automatically adjusting the number of instances or resources in a service based on demand. In AWS, auto-scaling is managed through **Auto Scaling Groups (ASGs)**, which monitor the load on instances and automatically scale the number of instances up or down.
+  - It can be based on metrics like CPU utilization, network traffic, or custom CloudWatch metrics.
+
+---
+
 
 1. What is AWS?
 2. What are the key services provided by AWS?

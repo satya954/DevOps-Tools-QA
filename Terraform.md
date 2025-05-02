@@ -82,10 +82,138 @@ To complete the process, you need to manually define the resource in your .tf fi
 }``
 This ensures that even if a terraform destroy or a change attempts to delete the resource, Terraform will throw an error, protecting essential infrastructure.
 
-## Q16: 
-**A**: 
-## Q11:
-**A**: 
-## Q11: 
-## Q11: 
+---
+
+
+
+## ✅ Terraform
+
+**Q1**. **How do you use Terraform for multiple regions?**
+  - To manage resources in multiple regions with Terraform:
+    - Define provider blocks for each region.
+    - Use the `provider` block with the `region` argument to specify the region.
+    - Example:
+      ```hcl
+      provider "aws" {
+        region = "us-east-1"
+      }
+
+      provider "aws" {
+        region = "us-west-2"
+        alias  = "west"
+      }
+
+      resource "aws_instance" "east_instance" {
+        provider = aws
+        ami           = "ami-0c55b159cbfafe1f0"
+        instance_type = "t2.micro"
+      }
+
+      resource "aws_instance" "west_instance" {
+        provider = aws.west
+        ami           = "ami-0c55b159cbfafe1f0"
+        instance_type = "t2.micro"
+      }
+      ```
+
+**Q2**. **Terraform modules: purpose and usage.**
+  - **Modules** in Terraform are containers for multiple resources that are used together. They allow for the reuse of configuration across multiple projects or environments.
+  - **Purpose**:
+    - **Reusability**: Encapsulates resources to make them reusable.
+    - **Organization**: Helps in logically grouping resources.
+    - **Maintainability**: Easier to maintain and update infrastructure.
+  - **Usage**:
+    - To use a module, define a `module` block in your Terraform configuration:
+      ```hcl
+      module "vpc" {
+        source = "terraform-aws-modules/vpc/aws"
+        name   = "my-vpc"
+        cidr   = "10.0.0.0/16"
+      }
+      ```
+
+**Q3**. **Difference between Terraform and Boto3?**
+  - **Terraform**:
+    - Terraform is an infrastructure-as-code tool that allows you to define and provision infrastructure across multiple cloud providers in a declarative manner.
+    - It supports multiple providers (AWS, Azure, Google Cloud, etc.) and focuses on managing infrastructure lifecycle.
+    - Terraform is declarative, where you define the desired end state, and it automatically manages resources.
+  - **Boto3**:
+    - Boto3 is a Python SDK for AWS, which provides programmatic access to AWS services.
+    - It is imperative, meaning you specify the exact steps to achieve a desired state (e.g., creating EC2 instances).
+    - Boto3 is specific to AWS and is used for scripting and automation using Python.
+
+**Q4**. **What modules have you used?**
+  - Common modules used in Terraform for AWS include:
+    - **VPC module**: To create VPCs, subnets, route tables, and related resources.
+    - **EC2 module**: To manage EC2 instances, security groups, and EBS volumes.
+    - **S3 module**: To create and manage S3 buckets.
+    - **IAM module**: To manage IAM roles, policies, and users.
+    - **Security Group module**: To configure security groups and associated rules.
+  - Example:
+    ```hcl
+    module "vpc" {
+      source = "terraform-aws-modules/vpc/aws"
+      name   = "my-vpc"
+      cidr   = "10.0.0.0/16"
+    }
+    ```
+
+**Q5**. **How do you lock Terraform state files?**
+  - **State locking** ensures that only one process can modify the state at a time, preventing race conditions and conflicts.
+  - **Backend configuration** like S3 with DynamoDB can be used to lock Terraform state files:
+    ```hcl
+    terraform {
+      backend "s3" {
+        bucket         = "my-terraform-state"
+        key            = "path/to/state.tfstate"
+        region         = "us-east-1"
+        encrypt        = true
+        dynamodb_table = "my-lock-table"
+      }
+    }
+    ```
+  - DynamoDB table is used to provide state locking and consistency.
+
+**Q6**. **Terraform init, plan, apply commands?**
+  - **terraform init**: Initializes a Terraform working directory by downloading the necessary provider plugins and initializing the backend.
+  - **terraform plan**: Creates an execution plan by comparing the current state of infrastructure with the desired state in the configuration files. It shows the changes Terraform will apply.
+  - **terraform apply**: Applies the changes required to reach the desired state of the configuration.
+
+**Q7**. **What happens if the state file is deleted?**
+  - If the Terraform state file is deleted:
+    - Terraform loses track of the resources it previously managed.
+    - It will not know the current state of the infrastructure, and as a result, any future runs of `terraform plan` or `terraform apply` will treat the infrastructure as "new" and might attempt to recreate resources.
+    - It is essential to back up the state file, especially in team environments, to avoid losing the current state.
+
+**Q8**. **Backend configuration in Terraform?**
+  - A **backend** in Terraform defines where the Terraform state is stored.
+  - The backend is responsible for storing and managing state files, ensuring state consistency and enabling features like state locking.
+  - Example configuration for using an S3 backend with DynamoDB for state locking:
+    ```hcl
+    terraform {
+      backend "s3" {
+        bucket         = "my-terraform-state"
+        key            = "path/to/state.tfstate"
+        region         = "us-east-1"
+        encrypt        = true
+        dynamodb_table = "my-lock-table"
+      }
+    }
+    ```
+
+**Q9**. **Resources provisioned using Terraform?**
+  - Terraform can provision a wide range of infrastructure resources, including:
+    - **Compute resources**: EC2 instances, autoscaling groups, Lambda functions.
+    - **Networking**: VPC, subnets, security groups, route tables.
+    - **Storage**: S3 buckets, EBS volumes, Glacier.
+    - **Identity and Access Management (IAM)**: Users, roles, policies.
+    - **Databases**: RDS instances, DynamoDB tables, Aurora clusters.
+
+**Q10**. **What happens if EC2s are manually deleted?**
+  - If EC2 instances managed by Terraform are manually deleted:
+    - The next `terraform apply` will see the instance as "missing" and will attempt to recreate it.
+    - Terraform maintains state files, so manual deletions can lead to discrepancies between the actual infrastructure and Terraform's state.
+    - It is best practice to manage infrastructure using Terraform to prevent this kind of drift.
+
+---
 
