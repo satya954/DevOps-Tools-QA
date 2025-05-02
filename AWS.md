@@ -113,3 +113,113 @@
 102. What environments have you set up for your project?
 103. Do you use the same AWS account for all environments?
 104. Where do you write and save your Lambda function code?
+
+
+
+Identity & Access Management  
+1. How would you use AWS Control Tower for secure multi-account setup?  
+2. How do you manage permission boundaries in AWS SSO?  
+3. How do you enable MFA in AWS Cognito?  
+4. How do you secure/manage identities in Cognito?  
+5. How do you implement RBAC in AWS?  
+6. How do you enforce MFA for IAM users?  
+7. How do you design IAM policies with least privilege?
+
+➡️ Networking & DNS  
+8. How would you configure Route 53 for global HA?  
+9. How do you implement weighted routing across regions?  
+10. What’s the process to map a custom domain to an S3 static site?
+
+➡️ Security & WAF  
+11. How do you use AWS WAF to block bot attacks?  
+12. How do you configure AWS Shield for DDoS protection?  
+13. How to create custom WAF rules for specific threats?
+
+➡️ Storage & Backup  
+14. How to securely store files in S3?  
+15. How to restrict public access but allow uploads?  
+16. How to enable automatic backup & versioning?
+
+➡️ Email with AWS SES  
+17. How to configure SES for transactional emails?  
+18. How to improve deliverability & avoid spam?  
+19. How to set up SPF, DKIM & DMARC?
+
+➡️ Compute & Scaling  
+20. How do you configure EC2 Auto Scaling for traffic spikes?  
+21. How to secure EC2 instances from unauthorized access?  
+22. What are EC2 cost optimization techniques?
+
+➡️ Database & Migration  
+23. How do you migrate SQL Server with minimal downtime?  
+24. How to implement automated RDS backups?  
+25. How to configure RDS for high availability?
+
+➡️ Infrastructure as Code  
+26. How would you structure Terraform for AWS infra?  
+27. What’s your preferred on-prem to AWS migration strategy?
+
+➡️ Monitoring & Auditing  
+28. How do you use CloudWatch alarms for CPU usage?  
+29. How to analyze app performance with CloudWatch + X-Ray?  
+30. How to audit API activity with CloudTrail?
+
+➡️ Load Balancing  
+31. Which ELB type supports both HTTP & TCP traffic?  
+32. How to set up ALB with Auto Scaling for traffic spikes?  
+33. How to protect ALB from DDoS & authenticate users?
+
+
+######################################################## Person Jyoti Sharma ########################################################
+1. How would you use AWS Control Tower to manage a secure multi-account setup?
+2. How do you manage permission boundaries in AWS SSO?
+3. What’s the best way to set up AWS WorkSpaces for 500 remote employees?
+4. Which migration strategy would you choose to move on-prem servers to AWS?
+5. How would you migrate a SQL Server database to AWS with minimal downtime?
+6. How do you ensure automatic failover between AWS regions?
+7. How would you structure Terraform code for AWS provisioning?
+8. How would you enable social login (Google/Facebook) using AWS Cognito?
+9. What’s your approach to securing and managing identities in Cognito?
+10. How do you enable Multi-Factor Authentication (MFA) in AWS Cognito?
+11. How would you configure Route 53 for global high availability?
+12. What’s the process to set up a custom domain for an S3 static website?
+13. How do you implement weighted routing between AWS regions?
+14. What’s your design for a secure file storage solution using S3?
+15. How would you restrict public access while allowing specific users to upload files?
+16. How do you enable automatic backup and versioning in S3?
+17. How would you configure EC2 Auto Scaling based on traffic patterns?
+18. What are the best practices to secure EC2 instances from unauthorized access?
+19. What steps do you take to optimize EC2 costs?
+20. How would you configure RDS for high availability?
+21. How do you implement automated backups and snapshots in RDS?
+22. What’s your method for migrating an on-premises DB to RDS with minimal downtime?
+23. How do you use AWS CloudTrail for API activity auditing?
+24. How do you set up CloudWatch alarms to detect high CPU usage?
+25. How do you use CloudWatch and X-Ray to analyze application performance?
+26. How would you set up AWS SES for sending transactional emails?
+27. How do you improve email deliverability and avoid spam filters in SES?
+28. How do you configure SPF, DKIM, and DMARC for domain authentication in SES?
+29. How would you protect your website against bot attacks using AWS WAF?
+30. How do you configure AWS Shield for DDoS protection?
+31. How would you create custom WAF rules to block specific attack patterns?
+32. How would you design IAM policies based on the principle of least privilege?
+33. How do you implement role-based access control (RBAC) in AWS?
+34. How do you enforce MFA for all IAM users?
+35. Which ELB type would you choose to handle both HTTP and TCP traffic, and why?
+36. How would you set up ALB with Auto Scaling for unpredictable traffic spikes?
+37. How would you protect your ALB against DDoS attacks using AWS services?
+38. How would you configure ALB to authenticate users before backend access?
+
+######################################################## Person 9 ########################################################
+What is the difference between ALB and NLB?
+ 🔹 An ALB is routing requests to 3 EC2 instances. Users log in, but they keep getting redirected to the login page. What could be the issue?
+ 🔹 What are placement groups in AWS?
+ 🔹 Which placement group should I use for high availability across multiple AZs?
+ 🔹 Traffic has increased on a t2.medium EC2 instance. How can you upgrade it without downtime or data loss?
+ 🔹 You have a private S3 bucket. You don’t want to make it public or create roles/policies, but you need to share a file. How?
+ 🔹 What are the different Route 53 routing policies?
+ 🔹 Your Terraform script is trying to replace an existing EC2 instance while upgrading from CentOS 6 to CentOS 8. How do you avoid downtime?
+ 🔹 What is the difference between IAM Policies and IAM Roles?
+ 🔹 An EC2 instance needs access to an S3 bucket. What is the best way to configure it?
+ 🔹 What is Kubernetes, and why is it used?
+ 🔹 Write a shell script to check if the last executed command was successful.
