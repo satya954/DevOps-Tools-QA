@@ -212,19 +212,21 @@ This ensures that even if a terraform destroy or a change attempts to delete the
 
 **Q15**. **What is the Terraform directory structure?**  
 - A typical Terraform project directory includes the following files:
-├── main.tf            # Main configuration
-├── variables.tf       # Input variable definitions
-├── outputs.tf         # Output variable definitions
-├── terraform.tfvars   # Variable values
-├── backend.tf         # Backend configuration (if used)
-└── modules/           # Reusable modules
+  ```hcl
+  ├── main.tf            # Main configuration
+  ├── variables.tf       # Input variable definitions
+  ├── outputs.tf         # Output variable definitions
+  ├── terraform.tfvars   # Variable values
+  ├── backend.tf         # Backend configuration (if used)
+  └── modules/           # Reusable modules
 
-## Q17. How do you import manually created AWS resources into Terraform?
+## Q16. How do you import manually created AWS resources into Terraform?
 
 To import manually created AWS resources into Terraform, follow these steps:
 
 1. **Identify the Resource Type and ID**:  
-   You first need to identify the type of resource and its ID that you want to import. For example, if you're importing an EC2 instance, you'll need the instance ID (e.g., `i-1234567890abcdef0`).
+   You first need to identify the type of resource and its ID that you want to import. 
+   For example, if you're importing an EC2 instance, you'll need the instance ID (e.g., `i-1234567890abcdef0`).
 
 2. **Use the `terraform import` Command**:  
    Terraform provides the `terraform import` command to bring existing resources under its management. The syntax for this command is:
@@ -233,7 +235,7 @@ To import manually created AWS resources into Terraform, follow these steps:
    terraform import <resource_type>.<resource_name> <resource_id>
 
 
-## Q18. Why should we run `terraform plan` before `terraform apply`?
+## Q17. Why should we run `terraform plan` before `terraform apply`?
 
 Running `terraform plan` before `terraform apply` is crucial for the following reasons:
 
@@ -395,31 +397,9 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
 
 - **Terraform Workspace** is a feature that allows you to manage multiple distinct environments or configurations within a single working directory. It helps in isolating different states of infrastructure for various environments such as `dev`, `prod`, or `staging`.
 
-- **Purpose of Workspaces**:
-  - **Environment Isolation**: Workspaces allow you to manage multiple environments with the same configuration. For example, you can use the same Terraform code to create resources in a `dev` workspace and `prod` workspace, ensuring they remain separate.
-  - **State Management**: Each workspace has its own state file, which keeps track of the resources managed by Terraform. This means that changes in one workspace do not affect other workspaces.
-  
 - **How Workspaces Work**:
   - By default, when you initialize a Terraform configuration, Terraform creates a `default` workspace.
   - You can create additional workspaces using the `terraform workspace` commands to isolate different configurations for various environments.
-
-- **Common Operations with Workspaces**:
-  - **Switching Workspaces**: You can switch between workspaces using the following command:
-    ```bash
-    terraform workspace select <workspace_name>
-    ```
-  - **Creating a New Workspace**: You can create a new workspace using:
-    ```bash
-    terraform workspace new <workspace_name>
-    ```
-  - **Listing Workspaces**: To see all the available workspaces, use:
-    ```bash
-    terraform workspace list
-    ```
-  - **Delete Workspace**: To delete a workspace, you can use:
-    ```bash
-    terraform workspace delete <workspace_name>
-    ```
 
 - **Example Usage**:
      ```bash
@@ -427,7 +407,6 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
      terraform workspace select dev
      terraform workspace list
      ```
-
 - **Use Case for Workspaces**:
   - You may use workspaces to manage separate infrastructure configurations for different stages of development (e.g., `dev`, `staging`, `prod`) within the same project or repository. Each workspace will have its own set of variables, state, and resource configurations.
   
@@ -436,7 +415,7 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
   - Workspaces are primarily used for managing multiple environments but do not provide full isolation of configurations (i.e., you may still need to use variable files or other tools for full environment management).
   - When switching between workspaces, Terraform automatically uses the corresponding state file.
 
-## Q27. How will you configure Terraform to use AWS?
+## Q24. How will you configure Terraform to use AWS?
 
 To configure Terraform to use AWS, follow these steps:
   - **Using dynamic AWS Credentials**:
@@ -466,7 +445,7 @@ To configure Terraform to use AWS, follow these steps:
   }
 
 
-## Q28. Write a Terraform script to create an EC2 instance and install a web server .
+## Q25. Write a Terraform script to create an EC2 instance and install a web server?
 
 ```hcl
 # Define the provider
