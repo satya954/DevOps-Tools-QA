@@ -1,11 +1,11 @@
-                    ================= Terraform Interview Questions ===================
-## Q1: What happens if your state file is accidentally deleted?
+                    ================= Terraform theory Questions ===================
+## Q1): What happens if your state file is accidentally deleted?
 **A**: Terraform loses track of all managed infrastructure. On next apply, it will attempt to recreate everything from scratch, potentially causing conflicts with existing resources.
 
 ## Q2) What happens if multiple team members run terraform apply simultaneously?
 **A**: State file locking fails, risking corrupted state and inconsistent infrastructure. One process succeeds while others error out, potentially leading to drift if not managed properly.
 
- ## Q3) What happens if a resource fails halfway through a terraform apply?
+## Q3) What happens if a resource fails halfway through a terraform apply?
 **A**: Terraform leaves successfully created resources running but marks the state as tainted. Subsequent apply operations will attempt to recreate failed resources, but you're left in partial state.
 
 ## Q4) What happens when AWS API rate limits are hit during a large terraform apply?
@@ -60,9 +60,7 @@ To complete the process, you need to manually define the resource in your .tf fi
 This ensures that even if a terraform destroy or a change attempts to delete the resource, Terraform will throw an error, protecting essential infrastructure.
 
 ---
-
-
-## ✅ Terraform
+                    ================= Terraform Practical Questions ===================
 
 **Q1**. **How do you use Terraform for multiple regions?**
   - To manage resources in multiple regions with Terraform:
@@ -222,7 +220,7 @@ This ensures that even if a terraform destroy or a change attempts to delete the
 └── modules/           # Reusable modules
 ``
 
-**Q19. How can you create a storage account in three different locations with three different names in AWS?**
+**Q16. How can you create a storage account in three different locations with three different names in AWS?**
 
 In AWS, we can create S3 buckets (as storage accounts) in different regions using a loop. Here's an example of how to create an S3 bucket in three different regions with different names:
 
@@ -240,7 +238,7 @@ resource "aws_s3_bucket" "buckets" {
   region               = each.value
 }
 
-**Q20**. **How do you import manually created AWS resources into Terraform?**
+**Q17**. **How do you import manually created AWS resources into Terraform?**
 
 To import manually created AWS resources into Terraform, follow these steps:
 
@@ -254,7 +252,7 @@ To import manually created AWS resources into Terraform, follow these steps:
    terraform import <resource_type>.<resource_name> <resource_id>
 
 
-### Q21. Why should we run `terraform plan` before `terraform apply`?
+### Q18. Why should we run `terraform plan` before `terraform apply`?
 
 Running `terraform plan` before `terraform apply` is crucial for the following reasons:
 
@@ -289,7 +287,7 @@ Running `terraform plan` before `terraform apply` is crucial for the following r
 - Running `terraform plan` first reduces the risk of errors, downtime, and unnecessary costs.
 
 
-### Q22. What happens if cloud infrastructure changes between `terraform plan` and `terraform apply`?
+## Q19. What happens if cloud infrastructure changes between `terraform plan` and `terraform apply`?
 
 When cloud infrastructure changes between the execution of `terraform plan` and `terraform apply`, Terraform handles the changes based on its state and the configuration files. The following scenarios can occur:
 
@@ -329,7 +327,7 @@ When cloud infrastructure changes between the execution of `terraform plan` and 
 - It is crucial to regularly refresh the Terraform state and minimize manual changes to infrastructure during Terraform management.
 
 
-### Q23. If a Virtual Machine already exists and you write the same Terraform configuration, what happens when you run Terraform commands?
+## Q20. If a Virtual Machine already exists and you write the same Terraform configuration, what happens when you run Terraform commands?
 
 When a Virtual Machine (VM) already exists and you run Terraform with the same configuration again, the following steps happen:
 
@@ -371,7 +369,7 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
 - Terraform commands are idempotent, meaning they only apply changes when necessary.
 
 
-**Q24**. **What is Terraform taint?**
+**Q21**. **What is Terraform taint?**
 
 - **Terraform taint** is a command used to mark a resource as **tainted**. A tainted resource will be destroyed and recreated during the next `terraform apply`. This can be helpful when a resource is in a faulty state and you need to force Terraform to recreate it.
   
@@ -385,7 +383,7 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
            terraform untaint aws_instance.example
 
 
-### Q25. What is Terraform user data?
+## Q22. What is Terraform user data?
 
 - **Terraform User Data** refers to the configuration or script that you pass to an instance during its creation. It is typically used in cloud environments like AWS, Azure, or Google Cloud to run scripts or configure the instance at the time of provisioning.
 
@@ -412,7 +410,7 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
   }
 
 
-### Q26. What is Terraform workspace?
+## Q23. What is Terraform workspace?
 
 - **Terraform Workspace** is a feature that allows you to manage multiple distinct environments or configurations within a single working directory. It helps in isolating different states of infrastructure for various environments such as `dev`, `prod`, or `staging`.
 
@@ -443,20 +441,9 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
     ```
 
 - **Example Usage**:
-  1. **Initialize Terraform in the default workspace**:
-     ```bash
-     terraform init
-     ```
-  2. **Create a new workspace for `dev` environment**:
      ```bash
      terraform workspace new dev
-     ```
-  3. **Switch to the `dev` workspace**:
-     ```bash
      terraform workspace select dev
-     ```
-  4. **List all workspaces**:
-     ```bash
      terraform workspace list
      ```
 
@@ -468,81 +455,20 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
   - Workspaces are primarily used for managing multiple environments but do not provide full isolation of configurations (i.e., you may still need to use variable files or other tools for full environment management).
   - When switching between workspaces, Terraform automatically uses the corresponding state file.
 
----
-
-Let me know if you need further clarification or examples on Terraform workspaces!
-
-
-### Q27. How will you configure Terraform to use AWS?
+## Q27. How will you configure Terraform to use AWS?
 
 To configure Terraform to use AWS, follow these steps:
-
-1. **Install Terraform**:
-   - Download and install Terraform on your local machine. You can follow the installation instructions from the [official Terraform website](https://www.terraform.io/downloads.html).
-
-2. **Install AWS CLI**:
-   - Ensure that the AWS Command Line Interface (CLI) is installed and configured. If you haven’t done that yet, you can follow the installation guide from the [AWS CLI documentation](https://aws.amazon.com/cli/).
-
-3. **Set up AWS Access Credentials**:
-   - Terraform needs AWS credentials to interact with AWS services. The credentials can be set up in several ways:
-     
-     a. **Environment Variables**:
-        - You can set the AWS access and secret keys in environment variables:
+     a. **Using dynamic AWS Credentials**
           ```bash
           export AWS_ACCESS_KEY_ID="your-access-key-id"
           export AWS_SECRET_ACCESS_KEY="your-secret-access-key"
-          export AWS_DEFAULT_REGION="us-west-2"  # Optional: Set the AWS region (default region)
+          export AWS_DEFAULT_REGION="ap-south-1"  # Optional: Set the AWS region (default region)
           ```
      
      b. **AWS CLI Configuration** (Recommended):
-        - Use the AWS CLI to configure your credentials (this is the recommended method):
           ```bash
           aws configure
           ```
-        - This will prompt you to enter your `AWS Access Key`, `AWS Secret Key`, `Default region name`, and `Default output format`.
-     
-     c. **Shared Credentials File**:
-        - Terraform will also look for AWS credentials in the default location: `~/.aws/credentials`.
-
-4. **Configure the AWS Provider in Terraform**:
-   - In your Terraform configuration file (usually `main.tf`), define the AWS provider:
-     ```hcl
-     provider "aws" {
-       region = "us-west-2"  # Replace with your preferred region
-     }
-     ```
-
-5. **Initialize Terraform**:
-   - Run `terraform init` to initialize the Terraform configuration. This command downloads the necessary provider plugins (in this case, the AWS provider).
-     ```bash
-     terraform init
-     ```
-
-6. **Create Infrastructure with Terraform**:
-   - Once the provider is configured, you can start writing Terraform code to create AWS resources. For example, to create an EC2 instance:
-     ```hcl
-     resource "aws_instance" "example" {
-       ami           = "ami-0c55b159cbfafe1f0"  # Replace with the AMI ID for your region
-       instance_type = "t2.micro"  # Use the instance type you require
-     }
-     ```
-
-7. **Plan and Apply Terraform Configuration**:
-   - After writing your configuration, you can run `terraform plan` to preview the changes:
-     ```bash
-     terraform plan
-     ```
-   - Once you’re satisfied with the plan, apply the changes to create resources in AWS:
-     ```bash
-     terraform apply
-     ```
-
-8. **Verify the AWS Resources**:
-   - After applying, you can check your AWS console to verify the resources (e.g., EC2 instances) have been created.
-
----
-
-### Optional Configuration:
 - **Using AWS Profiles**:
   If you are working with multiple AWS accounts, you can specify a named profile in your Terraform configuration:
   ```hcl
@@ -559,9 +485,7 @@ To configure Terraform to use AWS, follow these steps:
   }
 
 
-### Q28. Write a Terraform script to create an EC2 instance and install a web server.
-
-You can create an EC2 instance and install a web server (e.g., Apache or Nginx) using a `user_data` script in Terraform. The following script demonstrates how to create an EC2 instance, configure a security group, and install Apache as a web server on the instance.
+## Q28. Write a Terraform script to create an EC2 instance and install a web server .
 
 ```hcl
 # Define the provider
