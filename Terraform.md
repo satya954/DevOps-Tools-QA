@@ -439,7 +439,7 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
 ## Q27. How will you configure Terraform to use AWS?
 
 To configure Terraform to use AWS, follow these steps:
-     a. **Using dynamic AWS Credentials**
+     a. **Using dynamic AWS Credentials**:
           ```bash
           export AWS_ACCESS_KEY_ID="your-access-key-id"
           export AWS_SECRET_ACCESS_KEY="your-secret-access-key"
