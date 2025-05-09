@@ -219,24 +219,6 @@ This ensures that even if a terraform destroy or a change attempts to delete the
 ├── backend.tf         # Backend configuration (if used)
 └── modules/           # Reusable modules
 
-**Q16**. **How can you create a storage account in three different locations with three different names in AWS?**
-
-In AWS, we can create S3 buckets (as storage accounts) in different regions using a loop. Here's an example of how to create an S3 bucket in three different regions with different names:
-
-```hcl
-variable "regions" {
-  description = "List of AWS regions"
-  type        = list(string)
-  default     = ["us-east-1", "us-west-1", "eu-central-1"]
-}
-
-resource "aws_s3_bucket" "buckets" {
-  for_each             = toset(var.regions)
-  bucket               = "storage-bucket-${each.value}"
-  acl                  = "private"
-  region               = each.value
-}
-
 ## Q17. How do you import manually created AWS resources into Terraform?
 
 To import manually created AWS resources into Terraform, follow these steps:
