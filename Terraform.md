@@ -237,7 +237,7 @@ resource "aws_s3_bucket" "buckets" {
   region               = each.value
 }
 
-**Q17**. **How do you import manually created AWS resources into Terraform?**
+## Q17. How do you import manually created AWS resources into Terraform?
 
 To import manually created AWS resources into Terraform, follow these steps:
 
