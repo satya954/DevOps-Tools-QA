@@ -440,16 +440,16 @@ When a Virtual Machine (VM) already exists and you run Terraform with the same c
 
 To configure Terraform to use AWS, follow these steps:
   - **Using dynamic AWS Credentials**:
-          ```bash
-          export AWS_ACCESS_KEY_ID="your-access-key-id"
-          export AWS_SECRET_ACCESS_KEY="your-secret-access-key"
-          export AWS_DEFAULT_REGION="ap-south-1"  # Optional: Set the AWS region (default region)
-          ```
+       ```bash
+       export AWS_ACCESS_KEY_ID="your-access-key-id"
+       export AWS_SECRET_ACCESS_KEY="your-secret-access-key"
+       export AWS_DEFAULT_REGION="ap-south-1"  # Optional: Set the AWS region (default region)
+       ```
      
   - **AWS CLI Configuration** (Recommended):
-          ```bash
-          aws configure
-          ```
+       ```bash
+       aws configure
+       ```
 - **Using AWS Profiles**:
   If you are working with multiple AWS accounts, you can specify a named profile in your Terraform configuration:
   ```hcl
